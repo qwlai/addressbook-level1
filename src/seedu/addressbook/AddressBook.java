@@ -44,7 +44,7 @@ public class AddressBook {
     /**
      * Version info of the program.
      */
-    private static final String VERSION = "AddessBook Level 1 - Version 1.0";
+    private static final String VERSION = "AddressBook Level 1 - Version 1.0";
 
     /**
      * A decorative prefix added to the beginning of lines printed by AddressBook
@@ -1159,7 +1159,7 @@ public class AddressBook {
      *
      * @param fullString  Parameter as a string
      * @param prefix  Parameter prefix to be removed
-     * @return  string without the sign
+     * @return  string without the prefix
      */
     private static String removePrefix(String fullString, String prefix) {
         return fullString.replaceFirst(prefix, "");
