@@ -41,6 +41,36 @@
   add Esther Potato p/555555 e/esther@notreal.potato
   list
 
+  
+##########################################################
+# test edit person command, setup state for future tests
+##########################################################
+ 
+  # should catch invalid args format
+  edit wrong args wrong args
+  edit Valid Name p/12345 valid@email.butNoPrefix
+  edit Valid Name 12345 e/valid@email.butPhonePrefixMissing
+   
+  # should catch invalid person data
+  edit []\[;] p/12345 e/valid@e.mail
+  edit Valid Name p/not_numbers e/valid@e.mail
+  edit Valid Name p/12345 e/notAnEmail
+
+  # should catch non existent person
+  edit Name p/54321 e/eee@email.com
+  
+  # should edit correctly
+  edit Adam Brown p/888888 e/adambrown@gmail.com
+  list
+  edit Betsy Choo p/123456 e/benchoo@nus.edu.sg
+  list
+ 
+  # order of phone and email should not matter
+  edit Charlie Dickson e/charlie.d@nus.edu.sg p/565656
+  list
+  edit Dickson Ee e/dickson@nus.edu.sg p/987654
+  list
+   
 ##########################################################
 # test find persons command
 ##########################################################
