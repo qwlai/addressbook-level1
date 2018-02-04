@@ -55,6 +55,10 @@
 || 	Parameters: NAME p/PHONE_NUMBER e/EMAIL
 || 	Example: add John Doe p/98765432 e/johnd@gmail.com
 || 
+|| edit: Edit a person's details in the address book.
+|| 	Parameters: NAME p/PHONE_NUMBER e/EMAIL
+|| 	Example: edit John Doe p/81234567 e/johnd@gmail.com
+|| 
 || find: Finds all persons whose names contain any of the specified keywords (case-sensitive) and displays them as a list with index numbers.
 || 	Parameters: KEYWORD [MORE_KEYWORDS]
 || 	Example: find alice bob charlie
